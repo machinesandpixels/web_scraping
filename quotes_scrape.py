@@ -1,7 +1,7 @@
 import requests 
 from bs4 import BeautifulSoup
 from csv import writer
-from time import sleep
+# from time import sleep
 
 
 authors_list = []
@@ -31,7 +31,7 @@ while pages:
     # Multiple pages 
     next_button = my_soup.find(class_="next")
     pages = next_button.find("a")["href"] if next_button else None
-    sleep(1)
+    # sleep(1)
 
 
 print(authors_list)
